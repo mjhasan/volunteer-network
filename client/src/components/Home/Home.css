@@ -1,0 +1,28 @@
+/* Search Bar */
+
+.input-group {
+    width: 470px!important;
+    margin: 0 auto;
+}
+
+input.form-control {
+height: 40px;
+background: #FBFBFB;
+border: 1px solid #D6D6D6;
+box-sizing: border-box;
+border-radius: 8px;
+}
+
+button.btn.btn-primary {
+    border-radius: 8px;
+}
+
+.search-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.search-section {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}

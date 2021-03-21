@@ -1,0 +1,16 @@
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 00.90rem!important;
+    background: red;
+    text-align: center;
+    color: #fff;
+    margin-top: -43px;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 10px;
+    font-weight: 600;
+}
+
+.card {
+    border: none!important;
+}

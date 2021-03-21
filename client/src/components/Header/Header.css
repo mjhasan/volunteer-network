@@ -1,0 +1,32 @@
+.header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+
+ /* Navbar */ 
+
+ .nav-item a {
+     color: #0B0B0B;
+ } 
+
+.register-link {
+border-radius: 6px;
+background-color: #3F90FC;
+color: #fff;
+margin-right: 10px;
+}
+
+a.register-link.nav-link {
+    color: #fff;
+}
+
+.admin-link {
+border-radius: 6px;
+background-color: #434141;
+color: #fff;
+}
+
+a.admin-link.nav-link {
+    color: #fff;
+}
+
