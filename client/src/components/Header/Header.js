@@ -1,35 +1,41 @@
 import logo from '../../img/logos/logo.png';
 import React from 'react';
 import { Nav, Row, Col, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 const Header = () => {
+
+    // Dynamic CSS arguments
+    const dynamicDisplay = { display: 'none' }
+    const dynamicAlignment = { margin: '0 auto' }
+    const blankCss = { color: 'black' }
+    const location = useLocation();
     return (
         <div>
             <Container className="header">
                 <Row>
-                    <Col xs={3}>
-                        <img width={200} src={logo} alt="Volunteer network" />
+                    <Col style={location.pathname === '/login' || location.pathname === '/register' ? dynamicAlignment : blankCss} xs={3}>
+                        <Link to="/"><img width={200} src={logo} alt="Volunteer network" /></Link>
                     </Col>
-                    <Col>
+                    <Col style={location.pathname == '/login' || location.pathname === '/register' ? dynamicDisplay : blankCss}>
                         <Nav className="justify-content-end">
                             <Nav.Item>
-                            <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                                <Link className="nav-link" to="/">Home</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="/donation">Donation</Nav.Link>
+                                <Nav.Link>Donation</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="/events">Events</Nav.Link>
+                                <Nav.Link>Events</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link href="/blog">Blog</Nav.Link>
+                                <Nav.Link>Blog</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link className="register-link" href="/blog">Register</Nav.Link>
+                                <Link className="register-link nav-link" to="/register">Register</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link className="admin-link" href="/blog">Admin</Nav.Link>
+                                <Link className="admin-link nav-link" to="/admin">Admin</Link>
                             </Nav.Item>
                         </Nav>
                     </Col>

@@ -1,0 +1,35 @@
+.reg-box.col-md-6.offset-md-3 {
+    background-color: #fff;
+    border : 2px solid #eee;
+    border-radius :5px;
+    padding: 50px;
+}
+
+.reg-box h4 {
+    font-weight: 600;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.reg-box span {
+    color : red
+}
+
+.reg-box input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    margin: 8px 0;
+}
+
+.reg-box input[type="submit"] {
+    background-color: #3F90FC;
+    color: #fff;
+    padding: 8px;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}

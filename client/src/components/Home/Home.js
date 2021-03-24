@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { FormControl, InputGroup, Button, Container, Row, Col } from 'react-bootstrap';
-import { eventName } from '../../fakeData';
-import img from '../../img/images/clothSwap.png'
 import Events from '../Events/Events';
 
 const Home = () => {
-    const eventsList = eventName;
-    console.log(eventsList);
-    console.log(require(`../../img/images/animalShelter.png`))
+    const [events, setEvents] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:4000/allEvents')
+            .then(res => res.json())
+            .then(data => setEvents(data))
+    }, [])
     return (
         <div>
             <Container>
@@ -24,7 +25,7 @@ const Home = () => {
                     </InputGroup>
                 </div>
                 <Row>
-                    {eventsList.map(ev => <Events events={ev}></Events>)}
+                    {events?.map(ev => <Events key={ev._id} events={ev}></Events>)}
                 </Row>
             </Container>
         </div>

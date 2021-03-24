@@ -1,0 +1,49 @@
+
+.form-row input {
+    width: 90%;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.form-row button  {
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #0084FF;
+    border-radius: 5px;
+    background-color: #E5F3FF;
+    color: #0084FF;
+}
+
+form.add-container {
+    background-color: #fff;
+    padding: 21px;
+    border-radius: 10px;
+}
+form.add-container h6 {
+    padding-left: 12px;
+}
+
+textarea.input-description {
+    width: 90%;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.submit {
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 30px;
+}
+.submit input[type="submit"] {
+    width: 84px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+}

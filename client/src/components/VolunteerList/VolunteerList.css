@@ -1,0 +1,21 @@
+thead {
+    background-color: white!important;
+    border: none;
+    text-align: center;
+}
+
+td span {
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+span img {
+    padding-bottom: 5px;
+}
+
+td {
+    text-align: center;
+}

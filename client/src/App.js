@@ -11,10 +11,14 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Dashboard from './components/Dashboard/Dashboard';
 import PrivateRoute from './components/Login/PrivateRoute';
+import { createContext, useState } from 'react';
+import Admin from './components/Admin/Admin';
+export const userContext = createContext()
 
 function App() {
+  const [user, setUser] = useState([]);
   return (
-    <div>
+    <userContext.Provider value={[user, setUser]}>
       <Router>
         <Header></Header>
         <Switch>
@@ -27,12 +31,15 @@ function App() {
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>
+          <Route path="/admin">
+            <Admin></Admin>
+          </Route>
           <Route path="/">
             <Home></Home>
           </Route>
         </Switch>
       </Router>
-    </div>
+    </userContext.Provider>
   );
 }
 

@@ -1,0 +1,32 @@
+body {
+    background: #F9FAFC!important;
+}
+
+.login-box {
+    background-color: #fff;
+    border : 2px solid #eee;
+    border-radius :5px;
+    padding: 100px 30px 100px 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.login-box h4 {
+    font-weight: 600;
+}
+
+.login {
+    border: 2px solid #eee;
+    border-radius: 30px;
+    width: 60%;
+    margin-top: 40px!important;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login img {
+    width: 25px;
+    margin: 0px 62px 0px -86px;
+}

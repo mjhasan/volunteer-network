@@ -1,0 +1,18 @@
+.eventCard.row {
+    background-color: #fff;
+    margin: 20px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+.eventCard button {
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    width: 80px;
+    margin: 15px;
+}
+
+.eventCard h4 {
+    margin-top: 15px;
+}
