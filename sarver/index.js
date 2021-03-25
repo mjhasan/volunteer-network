@@ -3,13 +3,15 @@ const bodyParser = require('body-parser');
 const cors = require('cors')
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId
+require('dotenv').config()
 
 const app = express()
 const port = 4000
 app.use(cors())
 app.use(bodyParser.json())
 
-const uri = "mongodb+srv://process.env.DB_USER:process.env.DB_PASS@cluster0.qrsky.mongodb.net/process.env.DB_NAME?retryWrites=true&w=majority";
+
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qrsky.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
     const registerCollection = client.db("social-network").collection("register");
@@ -74,7 +76,7 @@ client.connect(err => {
 
 
 app.get('/', (req, res) => {
-    res.send('Working!')
+    res.send('Hello World!')
 })
 
-app.listen(process.env.PORT || port)
+app.listen(process.env.PORT || 4000)

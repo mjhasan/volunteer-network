@@ -10,7 +10,7 @@ const AddEvent = () => {
     const [startDate, setStartDate] = useState(new Date())
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:4000/addEvents', {
+        fetch('https://arcane-garden-35013.herokuapp.com/addEvents', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

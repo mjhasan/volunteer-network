@@ -15,7 +15,7 @@ const Register = () => {
     const onSubmit = data => {
         const regData = { date: startDate, ...data }
         console.log(regData);
-        fetch('http://localhost:4000/register', {
+        fetch('https://arcane-garden-35013.herokuapp.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

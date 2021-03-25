@@ -9,14 +9,14 @@ const Dashboard = () => {
     const [deleteItem, setDeleteItem] = useState(false)
     const [user, setUser] = useContext(userContext);
     useEffect(() => {
-        fetch('http://localhost:4000/registerlist?email=' + user.email)
+        fetch('https://arcane-garden-35013.herokuapp.com/registerlist?email=' + user.email)
             .then(res => res.json())
             .then(data => {
                 setRegList(data)
             })
     }, [deleteItem ])
     const deleteEvent = (id) => {
-        fetch('http://localhost:4000/delete/' + id, {
+        fetch('https://arcane-garden-35013.herokuapp.com/delete/' + id, {
             method: 'Delete'
         })
             .then(res => res.json())

@@ -7,13 +7,13 @@ import Moment from 'react-moment';
 const VolunteerList = () => {
     const [volunteer, setVolunteer] = useState();
     useEffect(() => {
-        fetch('http://localhost:4000/allRegisterList')
+        fetch('https://arcane-garden-35013.herokuapp.com/allRegisterList')
             .then(res => res.json())
             .then(data => setVolunteer(data))
     }, [volunteer])
 
     const trashEvent = (id) => {
-        fetch('http://localhost:4000/trash/' + id, {
+        fetch('https://arcane-garden-35013.herokuapp.com/trash/' + id, {
             method: 'Delete'
         })
             .then(res => res.json())

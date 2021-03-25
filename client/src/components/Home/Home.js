@@ -6,7 +6,7 @@ import Events from '../Events/Events';
 const Home = () => {
     const [events, setEvents] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/allEvents')
+        fetch('https://arcane-garden-35013.herokuapp.com/allEvents')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])
