@@ -9,8 +9,7 @@ const port = 4000
 app.use(cors())
 app.use(bodyParser.json())
 
-
-const uri = "mongodb+srv://admin:admin@cluster0.qrsky.mongodb.net/social-network?retryWrites=true&w=majority";
+const uri = "mongodb+srv://process.env.DB_USER:process.env.DB_PASS@cluster0.qrsky.mongodb.net/process.env.DB_NAME?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
     const registerCollection = client.db("social-network").collection("register");
@@ -75,7 +74,7 @@ client.connect(err => {
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Working!')
 })
 
 app.listen(process.env.PORT || port)
